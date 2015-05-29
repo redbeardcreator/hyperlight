@@ -1,10 +1,16 @@
-# Hyperlight
+# Hyperlight Redux
 
-This is a fork of Hyperlight. The intent is to make it installable via composer. Well, and also
-modernize the codebase.
+This is a fork of Hyperlight, cloned from the original Google Code repository. The intent is to make
+it installable via composer. And modernize the codebase.
 
 I'm doing this so I can propose using it in a few projects that I'm currently using that could use
 PHP-based code highlighting.
+
+I believe @klmr is the originator of this repository. If you notice this, feel free to contact me
+about it. Also, if you are a user of Hyperlight and you'd like to help me out with this, please feel
+welcome to submit a pull request.
+
+At some point, unless I start working with @klmr, I will have to rename this.
 
 ## Why use Hyperlight?
 
