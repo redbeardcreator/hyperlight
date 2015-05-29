@@ -38,7 +38,6 @@ class CppLanguage extends HyperLanguage {
             'operator' => '/<:|:>|<%|%>|%:|%:%:|\+\+|--|&&|\|\||::|<<|>>|##|\.\.\.|\.\*|->|->*|[-+*\/%^&|!~<>.=,;:?()\[\]\{\}]|[-+*\/%^&|=!~<>]=|<<=|>>=/',
             'include' => new Rule('/#\s*include/', '/\n/'),
             'preprocessor' => new Rule('/#\s*\w+/', '/\n/'),
-            //'pp_newline' => '/[^\\\\](?<bs>\\\\*?)(?P=bs)\\\\\n/',
             'pp_newline' => '/(?<!\\\\)(?:\\\\\\\\)*?\\\\\n/',
             'incpath' => '/<[^>]*>|"[^"]*"/',
             'string' => Rule::C_DOUBLEQUOTESTRING,

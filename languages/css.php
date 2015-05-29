@@ -23,10 +23,12 @@ class CssLanguage extends HyperLanguage {
         $strmod = implode('', $strmod);
 
         $this->addStates(array(
-            'init' => array('comment', 'uri', 'meta', 'id', 'class', 'pseudoclass', 'element', 'block', 'constraint', 'string'),
+            'init' => array('comment', 'uri', 'meta', 'id', 'class', 'pseudoclass',
+                            'element', 'block', 'constraint', 'string'),
             'block' => array('comment', 'attribute', 'value'),
             'constraint' => array('identifier', 'string'),
-            'value' => array('comment', 'string', 'color', 'number', 'uri', 'identifier', 'important'),
+            'value' => array('comment', 'string', 'color', 'number', 'uri', 'identifier',
+                             'important'),
         ));
 
         $this->addRules(array(
