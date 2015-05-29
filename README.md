@@ -3,6 +3,9 @@
 This is a fork of Hyperlight. The intent is to make it installable via composer. Well, and also
 modernize the codebase.
 
+I'm doing this so I can propose using it in a few projects that I'm currently using that could use
+PHP-based code highlighting.
+
 ## Why use Hyperlight?
 
 * **Easy to use.** There’s no configuration. The following code will highlight your source
