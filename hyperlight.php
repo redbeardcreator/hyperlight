@@ -686,11 +686,11 @@ class Hyperlight {
 
                 while (count($this->_states) > $closest_rule + 1) {
                     $lastState = array_pop($this->_states);
-                    $this->emitPop('', $lastState);
+                    $this->emitPop('');
                 }
                 $lastState = array_pop($this->_states);
                 $state = array_peek($this->_states);
-                $this->emitPop($closest_hit[0], $lastState);
+                $this->emitPop($closest_hit[0]);
             }
             else if (array_key_exists($closest_rule, $this->_lang->rule($state))) {
                 // Push state.
@@ -767,7 +767,7 @@ class Hyperlight {
         }
     }
 
-    private function emitPop($token = '', $class = '') {
+    private function emitPop($token = '') {
         $token = $this->processToken($token);
         if (array_pop($this->_omitSpans))
             $this->write($token);
