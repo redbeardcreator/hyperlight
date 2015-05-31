@@ -62,20 +62,6 @@ if (!function_exists('array_peek')) {
 }
 
 /**
- * @internal
- * For internal debugging purposes.
- */
-function dump($obj, $descr = null) {
-    if ($descr !== null)
-        echo "<h3>$descr</h3>";
-    ob_start();
-    var_dump($obj);
-    $dump = ob_get_clean();
-    ?><pre><?php echo htmlspecialchars($dump); ?></pre><?php
-    return true;
-}
-
-/**
  * Raised when the grammar offers a rule that has not been defined.
  */
 class NoMatchingRuleException extends Exception {
@@ -334,89 +320,6 @@ abstract class HyperLanguage {
     protected function addPostprocessing($rule, HyperLanguage $language) {
         $this->_postProcessors[$rule] = $language;
     }
-
-//    protected function addNestedLanguage(HyperLanguage $language, $hoistBackRules) {
-//        $prefix = get_class($language);
-//        if (!is_array($hoistBackRules))
-//            $hoistBackRules = array($hoistBackRules);
-//
-//        $states = array();  // Step 1: states
-//
-//        foreach ($language->_states as $stateName => $state) {
-//            $prefixedRules = array();
-//
-//            if (strstr($stateName, ' ')) {
-//                $parts = explode(' ', $stateName);
-//                $prefixed = array();
-//                foreach ($parts as $part)
-//                    $prefixed[] = "$prefix$part";
-//                $stateName = implode(' ', $prefixed);
-//            }
-//            else
-//                $stateName = "$prefix$stateName";
-//
-//            foreach ($state as $key => $rule) {
-//                if (is_string($key) and is_array($rule)) {
-//                    $nestedRules = array();
-//                    foreach ($rule as $nestedRule)
-//                        $nestedRules[] = ($nestedRule === '') ? '' :
-//                                         "$prefix$nestedRule";
-//
-//                    $prefixedRules["$prefix$key"] = $nestedRules;
-//                }
-//                else
-//                    $prefixedRules[] = "$prefix$rule";
-//            }
-//
-//            if ($stateName === 'init')
-//                $prefixedRules = array_merge($hoistBackRules, $prefixedRules);
-//
-//            $states[$stateName] = $prefixedRules;
-//        }
-//
-//        $rules = array();   // Step 2: rules
-//        // Mappings need to set up already!
-//        $mappings = array();
-//
-//        foreach ($language->_rules as $ruleName => $rule) {
-//            if (is_array($rule)) {
-//                $nestedRules = array();
-//                foreach ($rule as $nestedName => $nestedRule) {
-//                    if (is_string($nestedName)) {
-//                        $nestedRules["$prefix$nestedName"] = $nestedRule;
-//                        $mappings["$prefix$nestedName"] = $nestedName;
-//                    }
-//                    else
-//                        $nestedRules[] = $nestedRule;
-//                }
-//                $rules["$prefix$ruleName"] = $nestedRules;
-//            }
-//            else {
-//                $rules["$prefix$ruleName"] = $rule;
-//                $mappings["$prefix$ruleName"] = $ruleName;
-//            }
-//        }
-//
-//        // Step 3: mappings.
-//
-//        foreach ($language->_mappings as $ruleName => $cssClass) {
-//            if (strstr($ruleName, ' ')) {
-//                $parts = explode(' ', $ruleName);
-//                $prefixed = array();
-//                foreach ($parts as $part)
-//                    $prefixed[] = "$prefix$part";
-//                $mappings[implode(' ', $prefixed)] = $cssClass;
-//            }
-//            else
-//                $mappings["$prefix$ruleName"] = $cssClass;
-//        }
-//
-//        $this->addStates($states);
-//        $this->addRules($rules);
-//        $this->addMappings($mappings);
-//
-//        return $prefix . 'init';
-//    }
 
     private function makeCompiledLanguage() {
         return new HyperlightCompiledLanguage(
@@ -876,23 +779,6 @@ class Hyperlight {
     private function write($text) {
         $this->_result .= $text;
     }
-
-//      // DAMN! What did I need them for? Something to do with encoding …
-//      // but why not use the `$charset` argument on `htmlspecialchars`?
-//    private static function htmlentitiesCallback($match) {
-//        switch ($match[0]) {
-//            case '<': return '&lt;';
-//            case '>': return '&gt;';
-//            case '&': return '&amp;';
-//        }
-//    }
-//
-//    private static function htmlentities($text) {
-//        return htmlspecialchars($text, ENT_NOQUOTES);
-//        return preg_replace_callback(
-//            '/[<>&]/', array('Hyperlight', 'htmlentitiesCallback'), $text
-//        );
-//    }
 } // class Hyperlight
 
 /**
