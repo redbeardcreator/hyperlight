@@ -3,17 +3,17 @@
 /**
  * Copyright 2008 Konrad Rudolph
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -98,10 +98,10 @@ function preg_merge($glue, array $expressions, array $names = array()) {
 
         // Re-adjust backreferences:
         // TODO What about \R backreferences (\0 isn't allowed, though)?
-        
+
         // We assume that the expression is correct and therefore don't check
         // for matching parentheses.
-        
+
         $number_of_captures = preg_match_all('/\([^?]|\(\?[^:]/', $sub_expr, $_);
 
         if ($number_of_captures === false)
@@ -125,7 +125,7 @@ function preg_merge($glue, array $expressions, array $names = array()) {
         }
 
         // Last, construct the new sub-match:
-        
+
         $modifiers = implode('', $modifiers);
         $sub_modifiers = "(?$modifiers)";
         if ($sub_modifiers === '(?)')
@@ -166,5 +166,3 @@ function preg_strip($expression) {
 
     return array($sub_expr, $modifiers);
 }
-
-?>

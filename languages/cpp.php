@@ -79,5 +79,3 @@ class CppLanguage extends HyperLanguage {
         ));
     }
 }
-
-?>

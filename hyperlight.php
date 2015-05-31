@@ -3,17 +3,17 @@
 /*
  * Copyright 2008 Konrad Rudolph
  * All rights reserved.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -700,12 +700,12 @@ class Hyperlight {
             }
             else
                 $this->emit($closest_hit[0], $closest_rule);
-        } // while ($pos < $len)
+        }
 
         // Close any tags that are still open (can happen in incomplete code
         // fragments that don't necessarily signify an error (consider PHP
         // embedded in HTML, or a C++ preprocessor code not ending on newline).
-        
+
         $omitSpansBackup = $this->_omitSpans;
         for ($i = count($this->_states); $i > 1; --$i)
             $this->emitPop();
@@ -739,7 +739,6 @@ class Hyperlight {
         if (array_key_exists($nest_lang, $this->_postProcessors))
             return $this->_postProcessors[$nest_lang]->render($token);
         else
-            #return self::htmlentities($token);
             return htmlspecialchars($token, ENT_NOQUOTES);
     }
 
@@ -779,7 +778,7 @@ class Hyperlight {
     private function write($text) {
         $this->_result .= $text;
     }
-} // class Hyperlight
+}
 
 /**
  * <var>echo</var>s a highlighted code.
@@ -915,5 +914,3 @@ function hyperlight_apply_fold_marks($code, array $fold_marks) {
 
     return implode("\n", $lines);
 }
-
-?>

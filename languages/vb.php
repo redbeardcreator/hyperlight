@@ -103,5 +103,3 @@ class VbLanguage extends HyperLanguage {
         ));
     }
 }
-
-?>

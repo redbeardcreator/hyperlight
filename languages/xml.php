@@ -25,7 +25,7 @@ class XmlLanguage extends HyperLanguage {
             'value double' => $inline,
             'value single' => $inline,
         ));
-        
+
         $this->addRules(array(
             'comment' => '/<!--.*?-->/s',
             'cdata' => '/<!\[CDATA\[.*?\]\]>/',
@@ -51,5 +51,3 @@ class XmlLanguage extends HyperLanguage {
         ));
     }
 }
-
-?>

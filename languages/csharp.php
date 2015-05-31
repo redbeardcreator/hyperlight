@@ -75,5 +75,3 @@ class CsharpLanguage extends HyperLanguage {
         ));
     }
 }
-
-?>

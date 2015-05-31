@@ -10,5 +10,3 @@ class IphpLanguage extends PhpLanguage {
         $this->addStates(array('init' => $this->getState('php')));
     }
 }
-
-?>

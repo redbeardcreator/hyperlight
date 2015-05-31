@@ -16,11 +16,6 @@ function hyperlight_test($file, $lang = null) {
         "<h2>Test for language {$pretty_name}</h2>" :
         "<h2>Test with file “{$file}” for language {$pretty_name}</h2>";
     echo "$title\n";
-    #$lines = count(explode("\n", $code)) - 1;
-    #echo '<ol class="line-numbers">';
-    #for ($i = 0; $i < $lines; $i++)
-    #    echo '<li><div>&nbsp;</div></li>';
-    #echo '</ol>';
     ?><pre class="source-code <?php echo strtolower($lang); ?>"><?php $hl->renderAndPrint($code); ?></pre><?php
 }
 
@@ -123,4 +118,4 @@ Test::run('PregMerge');
 ?></pre><?php
     write_epilog();
 
-endif; ?>
+endif;

@@ -253,5 +253,3 @@ class PregMergeTests {
         Test::assertMatch($r, 'ab\\bcdd');
     }
 }
-
-?>
