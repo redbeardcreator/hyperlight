@@ -1,0 +1,15 @@
+{
+    "name": "hyperlight/hyperlight",
+    "description": "Source code highlighter written in pure PHP.",
+    "authors": [
+        {
+            "name": "Konrad Ruldoph",
+            "email": "konrad.rudolph@gmail.com"
+        },
+        {
+            "name": "Michael D Johnson",
+            "email": "redbeardcreator@gmail.com"
+        }
+    ],
+    "require": {}
+}
