@@ -11,5 +11,11 @@
             "email": "redbeardcreator@gmail.com"
         }
     ],
+    "autoload": {
+        "files": [
+            "src/array_peek.php",
+            "src/preg_helper.php"
+        ]
+    },
     "require": {}
 }

@@ -48,18 +48,8 @@
  * @package hyperlight
  */
 
-/** @ignore */
-require_once('preg_helper.php');
+require_once('vendor/autoload.php');
 
-if (!function_exists('array_peek')) {
-    /**
-     * @internal
-     * This does exactly what you think it does. */
-    function array_peek(array &$array) {
-        $cnt = count($array);
-        return $cnt === 0 ? null : $array[$cnt - 1];
-    }
-}
 
 /**
  * Raised when the grammar offers a rule that has not been defined.
