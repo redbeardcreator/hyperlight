@@ -12,6 +12,9 @@
         }
     ],
     "autoload": {
+        "psr-0": {
+            "": ["src"]
+        },
         "files": [
             "src/array_peek.php",
             "src/preg_helper.php"
