@@ -1,5 +1,10 @@
 <?php
 
+namespace Languages;
+
+use HyperLanguage;
+use Rule;
+
 // TODO
 // - Fill the scaffold below!
 // - Comments via #

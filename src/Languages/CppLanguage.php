@@ -1,5 +1,10 @@
 <?php
 
+namespace Languages;
+
+use HyperLanguage;
+use Rule;
+
 // TODO:
 // - Add escaped string characters
 // - Add 'TO DO', 'FIX ME', … tags
@@ -34,7 +39,7 @@ class CppLanguage extends HyperLanguage {
         ));
 
         $this->addRules(array(
-            'whitespace' => RULE::ALL_WHITESPACE,
+            'whitespace' => Rule::ALL_WHITESPACE,
             'operator' => '/<:|:>|<%|%>|%:|%:%:|\+\+|--|&&|\|\||::|<<|>>|##|\.\.\.|\.\*|->|->*|[-+*\/%^&|!~<>.=,;:?()\[\]\{\}]|[-+*\/%^&|=!~<>]=|<<=|>>=/',
             'include' => new Rule('/#\s*include/', '/\n/'),
             'preprocessor' => new Rule('/#\s*\w+/', '/\n/'),

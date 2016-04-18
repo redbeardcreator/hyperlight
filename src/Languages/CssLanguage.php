@@ -1,5 +1,10 @@
 <?php
 
+namespace Languages;
+
+use HyperLanguage;
+use Rule;
+
 class CssLanguage extends HyperLanguage {
     public function __construct() {
         $this->setInfo(array(

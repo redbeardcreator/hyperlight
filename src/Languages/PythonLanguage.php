@@ -1,5 +1,9 @@
 <?php
 
+namespace Languages;
+
+use HyperLanguage;
+use Rule;
 # TODO
 # Implement correct number formats (don't forget imaginaries)
 # Implement correct string/bytes formats (escape sequences)

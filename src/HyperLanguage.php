@@ -89,8 +89,7 @@ abstract class HyperLanguage {
 
     protected static function fromName($lang) {
         if (!isset(self::$_languageCache[$lang])) {
-            require_once(self::getLangPath($lang));
-            $klass = ucfirst("{$lang}Language");
+            $klass = "Languages\\" . ucfirst("{$lang}Language");
             self::$_languageCache[$lang] = new $klass();
         }
         return self::$_languageCache[$lang];
