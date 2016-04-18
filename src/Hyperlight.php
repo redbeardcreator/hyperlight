@@ -1,6 +1,5 @@
 <?php
 
-
 class Hyperlight {
     private $_lang;
     private $_result;

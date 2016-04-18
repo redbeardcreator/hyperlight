@@ -54,7 +54,7 @@ abstract class HyperLanguage {
      */
     public static function nameFromExt($ext) {
         if (self::$_filetypes === null) {
-            $ft_content = file('languages/filetypes', 1);
+            $ft_content = file(__DIR__ . '/Languages/filetypes', 1);
 
             foreach ($ft_content as $line) {
                 list ($name, $extensions) = explode(':', trim($line));
@@ -84,16 +84,21 @@ abstract class HyperLanguage {
 
     protected static function exists($lang) {
         return isset(self::$_languageCache[$lang]) or
-               file_exists("languages/$lang.php");
+            file_exists(self::getLangPath($lang));
     }
 
     protected static function fromName($lang) {
         if (!isset(self::$_languageCache[$lang])) {
-            require_once("languages/$lang.php");
+            require_once(self::getLangPath($lang));
             $klass = ucfirst("{$lang}Language");
             self::$_languageCache[$lang] = new $klass();
         }
         return self::$_languageCache[$lang];
+    }
+
+    protected static function getLangPath($lang)
+    {
+        return __DIR__ . "/Languages/$lang.php";
     }
 
     public function id() {
