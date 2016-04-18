@@ -1,5 +1,8 @@
-<?php define('HYPERLIGHT_SHORTCUT', true); require('../../hyperlight.php'); ?>
-<!DOCTYPE html 
+<?php
+define('HYPERLIGHT_SHORTCUT', true);
+require_once '../../vendor/autoload.php';
+?>
+<!DOCTYPE html
      PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
@@ -53,7 +56,7 @@
                 <p>The whole visual appearance of the highlighted code in Hyperlight is based on a few simple <acronym>CSS</acronym> rules. The strength of Hyperlight lies in the fact that these rules are controlled by class names that are the same across all language definitions, thereby making it easy to adapt one theme for all languages.</p>
                 <p>At the same time, a finer degree of control might be needed because one size doesn’t fit all. This is possible in three ways. First, language definitions can define <em>mappings</em> between different class names. Secondly, rules can be combined and nested. Lastly, if all else fails, code is also tagged with a language-specific class name. This can be used to establish a specific rule for one language only. Of course, these should be used sparingly because they make it much harder to develop colour themes that are usable across all language definitions. We will examine all these techniques in due course.</p>
                 <a id="the-theme-file"></a><h4>The Theme File</h4>
-                <p>A theme is just a <acronym>CSS</acronym> stylesheet that defines a set of rules based on class names. Therefore, in order to write a theme you need to know the rudiments of <acronym>CSS</acronym>. To limit the scope of the styles and make the theme definitions interoperate nicely with other, existing styles, it’s recommended that you prefix all theme-specific rules with <?php hy('.source-code', 'css', 'code'); ?>.</p> 
+                <p>A theme is just a <acronym>CSS</acronym> stylesheet that defines a set of rules based on class names. Therefore, in order to write a theme you need to know the rudiments of <acronym>CSS</acronym>. To limit the scope of the styles and make the theme definitions interoperate nicely with other, existing styles, it’s recommended that you prefix all theme-specific rules with <?php hy('.source-code', 'css', 'code'); ?>.</p>
 
                 <h4>An Example</h4>
                 <p>Let’s look at a small example theme file, actually a fragment of <code>zenburn.css</code>, which is used for this document.</p>

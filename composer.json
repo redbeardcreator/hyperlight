@@ -17,7 +17,8 @@
         },
         "files": [
             "src/array_peek.php",
-            "src/preg_helper.php"
+            "src/preg_helper.php",
+            "src/hyperlight.php"
         ]
     },
     "require": {}

@@ -1,6 +1,6 @@
 <?php
 
-require('hyperlight.php');
+require_once 'vendor/autoload.php';
 
 function hyperlight_test($file, $lang = null) {
     global $tests;

@@ -1,4 +1,4 @@
-<?php require('path/to/hyperlight.php'); ?>
+<?php require_once 'path/to/vendor/autoload.php'; ?>
 <html>
     <head>
         <title>Very simple test for Hyperlight</title>

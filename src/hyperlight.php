@@ -48,8 +48,6 @@
  * @package hyperlight
  */
 
-require_once('vendor/autoload.php');
-
 /**
  * <var>echo</var>s a highlighted code.
  *
