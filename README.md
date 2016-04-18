@@ -12,6 +12,22 @@ welcome to submit a pull request.
 
 At some point, unless I start working with @klmr, I will have to rename this.
 
+## Warning, changes afoot
+
+Until everything is done, expect the documentation to not keep up. I'll be actively moving things
+around and making it all Composer friendly, so until that's all I probably won't keep the
+documentation up-to-date. It should, however continue to work. That doesn't apply to the Wordpress
+plugin. I won't touch it until everything else is all done. And I imagine I'll have to make a few
+changes, since both Wordpress and Hyperlight will have changed by then.
+
+Also, I'll probably push changes up to GitHub periodically that will change things significantly
+over previous changes. For instance, I fully expect the namespace to change a few times before it's
+all done. Especially since there isn't one right now.
+
+And once that's all done, I'll probably do some static site generator plugins. I'm currently using
+Sculpin for my personal projects, so that will be the first, but I know there are at least one or
+two more that are active, so I'll work with them as well.
+
 ## Why use Hyperlight?
 
 * **Easy to use.** There’s no configuration. The following code will highlight your source
