@@ -7,10 +7,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <title>‹? Hyperlight ?› Examples</title>
-        <link rel="stylesheet" type="text/css" href="../style.css"/>
-        <script type="text/javascript" src="../jquery-1.2.6.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="../html/style.css"/>
+        <script type="text/javascript" src="../html/jquery-1.2.6.min.js"></script>
         <script type="text/javascript" src="theme_switcher.js"></script>
-        <link rel="stylesheet" type="text/css" href="../colors/zenburn.css" id="theme"/>
+        <link rel="stylesheet" type="text/css" href="../html/colors/zenburn.css" id="theme"/>
     </head>
 
     <body>
